@@ -1,3 +1,4 @@
+package FirstTextRPGame;
 import java.util.Scanner;
 
 
@@ -18,16 +19,33 @@ public static void main(String[] args){
     //variaveis de escolha
     int escolha;
     int opcaoCerta = 1;
+    //variavel para continuar o texto
+    int cont;
     //introdução como historia
     System.out.print("=============================================================================================================");
     System.out.println("======================================================================");
-    System.out.print("O Ano é 2077, " + nome + " decidiu se aventurar pela cidade de Sorocaba que a muito tempo está abandonada, ");
-    System.out.println("até encontrar uma antiga faculdade chamada FACENS, e então você decide entrar.");   
+    System.out.println("O Ano é 2077, " + nome + " decidiu se aventurar pela cidade de Sorocaba que a muito tempo está abandonada, ");
+        System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){}            
+    System.out.println("até encontrar uma antiga faculdade chamada FACENS, e então você decide entrar.");
+        System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){}                              
     System.out.println("era um lugar totalmente obscuro, e " + nome + " começou a escutar barulhos na sala de informatica, foi dar uma olhada");
+        System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){} 
     System.out.println("onde havia historias de que um tal de Ovidio se habitava por lá, logo ao entrar, uma pessoa te segura e te ameaça com uma faca, ");
+        System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){} 
     System.out.print("=============================================================================================================");
     System.out.println("======================================================================");
     System.out.println("Você escapou e precisa imediatamente de uma arma para se defender.");
+        System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){} 
 
     //escolha de armas
     int armaInt;
@@ -75,56 +93,59 @@ public static void main(String[] args){
         hp[1] = (hp[1] - armaInt);
             System.out.println("=========================================================================================");
             System.out.println("Você bateu no " + nomeInimigo[0] + " e ele ficou com " + hp[1] + " de vida.");
+            System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){} 
         hp[0] = (hp[0] - dano[0]);
-            System.out.println(nomeInimigo[0] + " devolveu com " + dano[0] + " e você ficou com: " + hp[0]);
+            System.out.println(nomeInimigo[0] + " devolveu com " + dano[0] + " e você ficou com: " + hp[0] + " de vida");
+            System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){} 
         if(hp[1] < 0){
             System.out.println("Você matou ele!");
             System.out.println("=========================================================================================");          
         }
         }
-        System.out.println("=========================================================================================");
-            System.out.println(nome + ", Você segue a sua trilha até encontrar com o " + nomeInimigo[3] + " Equipado com um poderoso arduino.");
-            System.out.println(nomeInimigo[3] + " é imparável e te faz a seguinte pergunta com a chance de te deixar escapar do prédio: ");
-            System.out.println("Qual o nome dado para a estrutura de repetição em java?");
-                System.out.println("0 - Arrays");
-                System.out.println("1 - For");
-                opcaoCerta = in.nextInt();
-            if(opcaoCerta == 1){
-                System.out.print("Você esta livre e salvo deste lugar!");
-            }else{
-                System.out.print("Você morreu!");
-            }
-        
+        System.out.println("=========================================================================================");      
     }if(escolha == 2){
         System.out.println("Você escapou do "+nomeInimigo[0]+" mas no meio do caminho, encontrou com "+nomeInimigo[1]+" e ele está equipado com um grande slide em PowerPoint");            
         while(hp[2] > 0){
             System.out.println("=========================================================================================");
+            System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){} 
             hp[2] = (hp[2] - armaInt);        
                 System.out.println("Você usa o(a) " + armaStr + " nele, e da " + armaInt + " de dano nele, com isso ele fica com " + hp[2] + " de vida!");
+                System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){} 
             hp[0] = (hp[0] - dano[1]);
                 System.out.println(nomeInimigo[1] + " revida e você fica com " + hp[0] + " de Vida!");
                 System.out.println("=========================================================================================");
+                System.out.println("Digite 1 para continuar");
+            cont = in.nextInt();
+            if(cont == 1){} 
             if(hp[2] < 0){
                 System.out.println("Você matou ele!");
             }
             }
             System.out.println("=========================================================================================");
-            System.out.println(nome + ", Você segue a sua trilha até encontrar com o " + nomeInimigo[3] + " Equipado com um poderoso arduino.");
-            System.out.println(nomeInimigo[3] + " é imparável e te faz a seguinte pergunta com a chance de te deixar escapar do prédio: ");
-            System.out.println("Qual o nome dado para a estrutura de repetição em java?");
-                System.out.println("0 - Arrays");
-                System.out.println("1 - For");
-                opcaoCerta = in.nextInt();
-                
-            if(opcaoCerta == 1){
-                System.out.print("Você esta livre e salvo deste lugar!");
-            }else{
-                System.out.print("Você morreu!");
-            }
-
-
+            
+            
+        }
+        
+        
+        System.out.println(nome + ", Você segue a sua trilha até encontrar com o " + nomeInimigo[3] + " Equipado com um poderoso arduino.");
+        System.out.println(nomeInimigo[3] + " é imparável e te faz a seguinte pergunta com a chance de te deixar escapar do prédio: ");
+        System.out.println("Qual o nome dado para a estrutura de repetição em java?");
+            System.out.println("0 - Arrays");
+            System.out.println("1 - For, while, do while");
+            opcaoCerta = in.nextInt();
+            
+        if(opcaoCerta == 1){
+            System.out.print("Você esta livre e salvo deste lugar!");
+        }else{
+            System.out.print("Você morreu!");
+        }
     }
-
-
-}
 }
